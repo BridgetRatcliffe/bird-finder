@@ -1,4 +1,4 @@
-# Bird Finder 🐦
+# Bird Finder 
 
 A Streamlit application that helps identify birds based on user descriptions using Mistral AI and eBird observation data.
 
@@ -8,45 +8,6 @@ A Streamlit application that helps identify birds based on user descriptions usi
 - **Location-Based Probabilities**: Calculates observation probabilities using eBird API data based on location and time of year
 - **Flexible Location Input**: Supports coordinates, city/state/country, or current location
 - **Customizable Date Ranges**: Adjustable search windows for recent observations and historical same-month data
-
-## Setup
-
-### Prerequisites
-
-- Python 3.8 or higher
-- Mistral AI API key (free tier available at https://console.mistral.ai/)
-- eBird API key (free, available at https://ebird.org/api/keygen)
-
-### Installation
-
-1. Clone or download this repository
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up API keys:
-
-   **For local development:**
-   - Copy `.env.example` to `.env`
-   - Add your API keys to `.env`:
-   ```
-   MISTRAL_API_KEY=your_mistral_api_key_here
-   EBIRD_API_KEY=your_ebird_api_key_here
-   ```
-
-   **For Streamlit Cloud deployment:**
-   - Add your API keys via the Streamlit Cloud dashboard
-   - Or create `.streamlit/secrets.toml` (see `.streamlit/secrets.toml.example`)
-
-### Running Locally
-
-```bash
-streamlit run app.py
-```
-
-The app will open in your browser at `http://localhost:8501`
 
 ## Usage
 
@@ -66,7 +27,18 @@ The app will open in your browser at `http://localhost:8501`
    - Query eBird for observation data in your location
    - Calculate probabilities based on observation frequency
 
-5. **Review results**: See the top 5 suggestions ranked by probability
+5. **Review results**: See the top 5 suggestions ranked by likelihood. Click on the bird name to be taken to ebird.org to confirm which is your bird!
+
+### No Results Found
+- Try a more detailed bird description
+- Adjust the date range settings in the sidebar
+- Verify your location is correct
+- Some rare birds may not have observations in certain areas
+
+### Geocoding Issues
+- Try different location formats (e.g., "New York, NY" vs "New York City")
+- Use coordinates directly if geocoding fails
+- Check your internet connection
 
 ## Project Structure
 
@@ -84,53 +56,6 @@ bird-finder/
 ├── .gitignore          # Git ignore file
 └── README.md           # This file
 ```
-
-## API Keys
-
-### Mistral AI
-1. Sign up at https://console.mistral.ai/
-2. Navigate to API keys section
-3. Create a new API key
-4. Copy the key to your `.env` file or Streamlit Cloud secrets
-
-### eBird
-1. Visit https://ebird.org/api/keygen
-2. Log in with your eBird account (create one if needed)
-3. Generate an API key
-4. Copy the key to your `.env` file or Streamlit Cloud secrets
-
-## Deployment to Streamlit Cloud
-
-1. Push your code to a GitHub repository
-2. Go to https://share.streamlit.io/
-3. Sign in with your GitHub account
-4. Click "New app"
-5. Select your repository and branch
-6. Set the main file path to `app.py`
-7. Add your API keys in the "Secrets" section:
-   ```
-   MISTRAL_API_KEY=your_key_here
-   EBIRD_API_KEY=your_key_here
-   ```
-8. Click "Deploy"
-
-## Troubleshooting
-
-### API Key Errors
-- Ensure your API keys are correctly set in `.env` (local) or Streamlit Cloud secrets
-- Check that API keys are valid and have not expired
-- Verify you're using the correct key format (no extra spaces or quotes)
-
-### No Results Found
-- Try a more detailed bird description
-- Adjust the date range settings in the sidebar
-- Verify your location is correct
-- Some rare birds may not have observations in certain areas
-
-### Geocoding Issues
-- Try different location formats (e.g., "New York, NY" vs "New York City")
-- Use coordinates directly if geocoding fails
-- Check your internet connection
 
 ## License
 
