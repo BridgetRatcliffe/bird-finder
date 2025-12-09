@@ -1,6 +1,6 @@
 # Bird Finder 
 
-A Streamlit application that helps identify birds based on user descriptions using Mistral AI and eBird observation data.
+A Streamlit application that helps identify birds based on user descriptions using Mistral AI and eBird observation data. The web app can be found at: https://bird-finder.streamlit.app/ (you need to request access).
 
 ## Features
 
@@ -10,6 +10,8 @@ A Streamlit application that helps identify birds based on user descriptions usi
 - **Customizable Date Ranges**: Adjustable search windows for recent observations and historical same-month data
 
 ## Usage
+
+![Demo of Bird Finder](images/bird-finder.gif)
 
 1. **Describe the bird**: Enter a detailed description including size, colors, beak shape, behavior, etc.
 
