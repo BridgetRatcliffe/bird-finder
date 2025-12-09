@@ -3,5 +3,5 @@ requests>=2.31.0
 python-dotenv>=1.0.0
 mistralai>=1.0.0
 geopy>=2.4.0
-streamlit-geolocation>=0.1.0
+streamlit-geolocation
 
